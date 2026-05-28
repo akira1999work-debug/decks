@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+<title>すまし猫流 AI開発日誌 — 企画サマリ</title>
+<style>
+  :root{
+    --bg:#fafaf7; --fg:#2a2a2a; --muted:#6b6b6b; --line:#e6e3dc;
+    --accent:#c25b3a; --card:#ffffff; --soft:#f3efe7;
+    --ok:#3a7a47; --warn:#b58300; --danger:#a23a3a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo",sans-serif;line-height:1.65}
+  .wrap{max-width:880px;margin:0 auto;padding:32px 24px 96px}
+  header.hero{padding:28px 28px 24px;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:20px}
+  .channel{font-size:13px;color:var(--muted);letter-spacing:.08em}
+  h1{font-size:28px;margin:6px 0 4px;letter-spacing:.02em}
+  .tagline{color:var(--accent);font-weight:600;margin:6px 0 0}
+  .meta{margin-top:10px;font-size:12px;color:var(--muted)}
+  .meta a{color:var(--muted)}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin:14px 0}
+  section h2{font-size:18px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  section h3{font-size:14px;margin:14px 0 6px;color:var(--accent)}
+  p{margin:6px 0}
+  ul{margin:6px 0 6px 1.2em;padding:0}
+  li{margin:3px 0}
+  .grid{display:grid;grid-template-columns:140px 1fr;gap:10px 16px;margin:6px 0}
+  .grid dt{color:var(--muted);font-size:13px;padding-top:2px}
+  .grid dd{margin:0}
+  .pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;background:var(--soft);color:var(--fg);margin-right:4px}
+  .pill.ok{background:#e3f0e6;color:var(--ok)}
+  .pill.warn{background:#f6eccd;color:var(--warn)}
+  .pill.danger{background:#f4dcdc;color:var(--danger)}
+  .quote{border-left:3px solid var(--accent);background:var(--soft);padding:10px 14px;border-radius:6px;margin:10px 0;font-size:14px}
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.twocol{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.grid dt{padding-top:8px}}
+  .card{background:var(--soft);border-radius:10px;padding:12px 14px}
+  .card h4{margin:0 0 4px;font-size:14px;color:var(--accent)}
+  .checklist{list-style:none;margin-left:0}
+  .checklist li{padding:6px 0;border-bottom:1px dashed var(--line);display:flex;align-items:flex-start;gap:10px}
+  .checklist li:last-child{border-bottom:none}
+  .checklist input[type=checkbox]{margin-top:5px}
+  .small{font-size:12px;color:var(--muted)}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:13px}
+  .negative{color:var(--danger)}
+  .footer{margin-top:24px;font-size:12px;color:var(--muted);text-align:center}
+  details{margin:8px 0}
+  summary{cursor:pointer;color:var(--accent);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="channel">YouTube CHANNEL</div>
+  <h1>すまし猫流 AI開発日誌</h1>
+  <p class="tagline">真面目に不真面目／AIでサボる／1日をコントロール／余白をみつけよう</p>
+  <div class="meta">
+    最終更新: 2026-05-28　/　ステータス: <span class="pill ok">企画固まり段階</span> 立ち上げ準備中<br>
+    出典: <a href="./mihaku-youtube-channel-strategy.md">mihaku-youtube-channel-strategy.md</a> ／ memory <code>project_mihaku_youtube_channel.md</code>
+  </div>
+</header>
+
+<section>
+  <h2>1. 大方針 (なんのためのチャンネル?)</h2>
+  <div class="quote">koki個人の<strong>パーソナルブランド</strong>。<strong>YouTube広告収入は非目的</strong>。最終目的は <strong>mihaku 等 自社プロダクトの収益貢献＝集客ファネル／マーケ資産</strong>。最適化指標は再生数/RPMでなく「価値観の合うファン獲得 → mihaku転換」。</div>
+  <h3>扱う範囲</h3>
+  <ul>
+    <li><span class="pill ok">対象</span> koki の個人開発オリジナル: mihaku / kotonoha / 今後の自作</li>
+    <li><span class="pill danger">対象外</span> Eden系（EdenQuest / edenteacher 等。別会社所有）— 保守開発は続けるがチャンネルには出さない・事例にもしない</li>
+  </ul>
+</section>
+
+<section>
+  <h2>2. テーマ／keystone</h2>
+  <div class="twocol">
+    <div class="card"><h4>キャッチ4語</h4>
+      真面目に不真面目／AIでサボる／1日をコントロール／余白をみつけよう
+    </div>
+    <div class="card"><h4>keystone</h4>
+      <strong>「AIでサボる」</strong>が3本柱を貫通。世の<em>「AIで生産性10倍」</em>の<strong>逆張り</strong>＝<em>「AIで減らして余白を取り戻す」</em>
+    </div>
+  </div>
+  <h3>3本柱（＋横断1）</h3>
+  <ul>
+    <li><strong>① 考えの発信（オピニオン）</strong> — AI時代の作り方・働き方・生き方</li>
+    <li><strong>② 最新情報の共有</strong> — AI/Claude/個人開発まわりを「これでこう楽できる」角度で</li>
+    <li><strong>③ mihaku的哲学</strong> — やさしい生産性／責めない／持続可能な自己管理</li>
+    <li><span class="small">横断:</span> mihaku 開発の歩み（"開発実況"は主役ではなく価値観の事例として織り込む）</li>
+  </ul>
+  <h3>重要ニュアンス（誤読防止）</h3>
+  <ul>
+    <li class="negative">怠け／反労働ではない。「サボってる風に見せて実はAIで高生産性、やる時はやる」</li>
+    <li class="negative">FIRE否定派。<strong>働くこと自体が幸せ</strong>。余白は "働かないこと" ではなく "無駄と苦しみを削ること"</li>
+    <li class="negative">"減らす" のは苦労／無駄であって成果ではない（drive=前進カテゴリも肯定）</li>
+    <li>涼しい顔(effortless)で結果を出す＝<em>真面目に不真面目</em> の核</li>
+  </ul>
+  <h3>哲学コピー（mihakuコア。発信時はkokiの言葉として）</h3>
+  <p class="small">減らす&gt;増やす ／ 1日3つだけ ／ 余白は怠けでなく選択 ／ 手放すこと＝選ぶこと ／ 自分で選んだ3つ&gt;決められた10個 ／ 何もしない日も生きた1日 ／ アプリは評価も命令もしない ／ 「どうすべきか」より「どうありたいか」</p>
+</section>
+
+<section>
+  <h2>3. ターゲット (ICP)</h2>
+  <p>デモグラではなく <strong>サイコグラフィック＝価値観で繋がる人</strong>。やさしい生産性／AI時代の作り方・生き方に共感する層。</p>
+  <p class="small">この設計が「BIPで集まる開発者≠課金顧客」問題を構造的に解消。集まるのは"コーディングを見たい人"でなく"思想に共感する人"＝mihakuの真の顧客。<br>旧 P1(開発者) → P2(エンドユーザー) のフェーズ切替は副次的に残るのみ。</p>
+</section>
+
+<section>
+  <h2>4. フォーマット</h2>
+  <dl class="grid">
+    <dt>言語</dt><dd>日本語音声メイン＋英語SRT字幕（焼き込みせずアップロード）<br><span class="small">英語ネイティブより「英語第2言語のアジア／欧州」に届く</span></dd>
+    <dt>露出</dt><dd>顔出しなし・<strong>koki本人の生声</strong>（AI音声は使わない）</dd>
+    <dt>形態</dt><dd>「リスナー」志向＝<strong>ラジオ的・音声エッセイ寄り</strong>（Yパパ型）。画面録画は補助</dd>
+    <dt>看板キャラ</dt><dd><strong>2D静止画の猫マスコット</strong>＋生声（PNGtuber型、Veadotube等でほぼ無料）</dd>
+    <dt>動画長 / 頻度</dt><dd>立ち上げ目安: 中尺 12〜18分 × 週1（Shawn Hickman型）／ Shorts 並走は<span class="pill warn">未決</span></dd>
+  </dl>
+  <h3>不採用（理由）</h3>
+  <ul>
+    <li>Live2D / VTuber — コスト高（$1k〜5k）、顔トラ前提、生声と相性最悪</li>
+    <li>AI生成アバター — YouTube AI量産規制の直撃圏、収益化リスク</li>
+    <li>ゆっくり／ずんだもん（合成音声）— 「本人生声」の強みと矛盾＋審査厳化中</li>
+  </ul>
+</section>
+
+<section>
+  <h2>5. チャンネル名・ハンドル</h2>
+  <dl class="grid">
+    <dt>チャンネル名</dt><dd><strong>すまし猫流 AI開発日誌</strong><br><span class="small">被りチェック済（フル／すまし猫流／すまし猫 いずれもクリア）<br>すまし猫流=個性／流儀、AI開発=topic/SEO/mihaku橋、日誌=devlog/連載</span></dd>
+    <dt>@ハンドル候補</dt><dd>
+      <span class="pill">@sumashineko</span> 第一<br>
+      <span class="pill">@sumashinekoryu</span><br>
+      <span class="pill">@sumashineko_ai</span><br>
+      <span class="small">最終確認は YouTube / X で登録試行</span>
+    </dd>
+    <dt>ドメイン</dt><dd><code>sumashineko.com</code>（空き＝<strong>取得推奨</strong>）</dd>
+    <dt>タグライン</dt><dd>「AIでサボる」系を被せる <span class="pill warn">最終決定 未決</span><br><span class="small">"仕事術"を名前に直挿しは激戦区＆効率マキシ層流入のため避けた</span></dd>
+  </dl>
+</section>
+
+<section>
+  <h2>6. すまし猫の使い方（署名フォーマット）</h2>
+  <div class="quote">
+    すまし猫 ＝ <strong>kokiの分身／代弁者</strong>（別キャラではない。猫とkokiの対話はしない）。<br>
+    笑いは "二人の掛け合い" でなく <strong>一人の自虐</strong>＝<em>すまし顔の建前ナレーション</em> × <em>気合の現実映像</em> のギャップに自分でツッコむ。
+  </div>
+  <h3>名物ネタ（チャンネルの署名）</h3>
+  <p><strong>「AIで楽しようとして結局気合」</strong>＝企画エンジン＆「真面目に不真面目」の映像化。</p>
+  <h3>編集ネタ例</h3>
+  <ul>
+    <li>テロップ対比「AIで時短した時間 vs AIと格闘した時間」</li>
+    <li>「今日はAIに任せて昼寝」→（数時間後）「プロンプト直すだけで日が暮れた」</li>
+    <li>余裕の録りナレーション × 汗だく作業クリップのギャップ編集</li>
+  </ul>
+  <h3>キャラ運用ルール</h3>
+  <ul>
+    <li>猫は <strong>作り込まない</strong>（キャラ設定／性格アーク無し）。Yパパ式の「代弁者」のみ</li>
+    <li>人格の本体は <strong>声・テンポ・ユーモア</strong>（Fireship 3原則）。猫は視覚の錨</li>
+    <li>作業風景動画に <strong>実際の飼い猫3匹</strong>が登場可＝on-themeなB-roll</li>
+    <li>mihaku のキャラ（凛 等）は「作中キャラ」として登場可。製品宣伝兼ねる</li>
+  </ul>
+</section>
+
+<section>
+  <h2>7. 視聴者への提供価値 (Promise)</h2>
+  <p>優先構造: <strong>②気持ちの余白=心臓 / ①実用=入口 / ③癒し=接着剤</strong></p>
+  <div class="twocol">
+    <div class="card"><h4>① 使える"本音"（入口）</h4>
+      AI開発の本音ノウハウ（失敗込み「AIで楽しようとして結局気合」）＋ <strong>koki流の仕事術</strong>（涼しい顔で"余白"を作る働き方の実践テク）。<br>
+      <span class="small">generic な hustle 仕事術にはしない＝哲学で差別化</span>
+    </div>
+    <div class="card"><h4>② 気持ちの余白（核）</h4>
+      「もっとやらなきゃ」の焦りからの解放。「頑張るな」でなく <em>「涼しい顔で苦しまずに、やる時はやる」</em> という働き方の選択肢＝安心と"居場所"。<strong>mihaku哲学の無料体験＝ファネル核</strong>。
+    </div>
+    <div class="card"><h4>③ クスッと癒し（接着剤）</h4>
+      猫＋自虐ギャップ＋ながら聴き伴走（body doubling）。面白い・癒される・また聴きたくなる。
+    </div>
+    <div class="card"><h4 class="negative">提供しない</h4>
+      神ツール煽り／"AIで不労所得"の射幸心／完璧チュートリアル（むしろ失敗を見せる）
+    </div>
+  </div>
+  <h3>観る理由</h3>
+  <ul>
+    <li><strong>単発:</strong> Tips・一笑い・視点</li>
+    <li><strong>登録:</strong> mihaku物語の続き＋ラジオ的伴走＋価値観の居場所</li>
+  </ul>
+</section>
+
+<section>
+  <h2>8. 制作ワークフロー（ほぼ無料）</h2>
+  <ol>
+    <li><strong>OBS</strong> で録画（画面＋生声）</li>
+    <li><strong>WhisperX</strong>（<code>large-v3</code>。turbo は日本語NG）で文字起こし</li>
+    <li><strong>Claude</strong> で英語SRT翻訳（タイムコード保持／技術用語そのまま指示）</li>
+    <li><strong>DaVinci Resolve</strong> で編集</li>
+    <li><strong>YouTube Studio</strong> で日英字幕＋英語タイトル／説明をアップ</li>
+  </ol>
+  <p class="small">kotonoha（旧 voice-input）の Whisper 運用ノウハウ＆固有名詞辞書は流用可能。</p>
+  <h3>形式メカニクス</h3>
+  <ul>
+    <li>静止画+音声は <strong>90秒で離脱</strong> → 猫マスコットのループアニメ＋Ken Burns＋テロップが最低ライン</li>
+    <li>30秒70%維持が推薦の閾値。60〜90秒ごとにマイクロフック、50%地点に強フック、チャプター必須</li>
+    <li>Shorts+長尺併用で成長3倍（長尺から切り抜き）</li>
+  </ul>
+</section>
+
+<section>
+  <h2>9. 核心リスクと対策</h2>
+  <div class="card">
+    <h4>BIPフォロワー(開発者) ≠ 課金顧客(非開発者) 問題</h4>
+    <p>サイコグラフィックICP設計（§3）で構造的に緩和。さらに転換施策:</p>
+    <ul>
+      <li>waitlist に <strong>ICPフィルタ</strong>（今使ってるツール／一番の困りごとを必須質問）</li>
+      <li>開発者ファンは「顧客」でなく <strong>アンバサダー</strong>化</li>
+      <li>ベータDiscordでエンドユーザーと <strong>共創を公開</strong></li>
+      <li>ローンチ直前のファウンダー割引は <strong>waitlist登録者だけ</strong>に配信（チャネル分離）</li>
+    </ul>
+    <p class="small">コミュニティ型 waitlist 転換率: 15〜25%（通常の 3〜5倍）</p>
+  </div>
+</section>
+
+<section>
+  <h2>10. 効く前例（参考）</h2>
+  <ul>
+    <li><strong>サプー</strong>（Python VTuber, 約16万）— 日本語×プログラミング×マスコット×生声の成功証明</li>
+    <li><strong>Fireship</strong>（414万）— 顔なしdevの天井。人格は声・テンポ・ユーモア</li>
+    <li><strong>Shawn Hickman</strong> — 週次Worklog×中尺×声。持続可能な型</li>
+    <li><strong>Marc Lou</strong> — 数字入りタイトル</li>
+    <li><strong>How to ADHD / 益田裕介</strong> — shame-free トーン。mihakuの「責めないUI」と一致</li>
+    <li><strong>CGP Grey / Cortex</strong> — 哲学ファースト＋概念の儀式化 → 有料会員 (Yearly Theme型)</li>
+    <li><strong>COTEN RADIO</strong> — 顔なし音声＋ミッション型サポーター</li>
+  </ul>
+</section>
+
+<section>
+  <h2>11. 未決事項（チェックリスト）</h2>
+  <ul class="checklist">
+    <li><input type="checkbox"> YouTube チャンネル＆@ハンドル登録（<code>@sumashineko</code> 等）</li>
+    <li><input type="checkbox"> X (Twitter) ハンドル登録</li>
+    <li><input type="checkbox"> <code>sumashineko.com</code> ドメイン取得</li>
+    <li><input type="checkbox"> タグライン最終決定（「AIでサボる」系の言い回し）</li>
+    <li><input type="checkbox"> 猫マスコット（代弁アバター）のデザイン要件確定</li>
+    <li><input type="checkbox"> 猫マスコットイラスト制作</li>
+    <li><input type="checkbox"> 第1話の企画（タイトル・構成）</li>
+    <li><input type="checkbox"> waitlist 立ち上げ時期</li>
+    <li><input type="checkbox"> Discord 立ち上げ時期</li>
+    <li><input type="checkbox"> Shorts (YT Shorts / TikTok) 並走の是非</li>
+  </ul>
+  <p class="small">※ チェック状態はブラウザ保存されないため、確定したら本HTMLを編集 (memory も同時更新)</p>
+</section>
+
+<section>
+  <h2>12. 関連リンク</h2>
+  <ul>
+    <li>戦略フルリサーチ: <a href="./mihaku-youtube-channel-strategy.md">docs/mihaku-youtube-channel-strategy.md</a></li>
+    <li>メモリ: <code>C:\Users\晃伎\.claude\projects\C--ClaudeCode\memory\project_mihaku_youtube_channel.md</code></li>
+    <li>スキル: <code>/sumashineko</code>（このチャンネル企画セッションを起動）</li>
+    <li>関連プロジェクト: mihaku（本体）／ kotonoha（Whisper 文字起こし環境）</li>
+  </ul>
+</section>
+
+<details>
+  <summary>このHTMLの更新ルール</summary>
+  <ul class="small">
+    <li>確定事項が動いたら memory <code>project_mihaku_youtube_channel.md</code> と本HTMLを <strong>セット</strong>で更新（feedback_spec_sync.md 準拠）</li>
+    <li>巨大な戦略リサーチ doc は基本書き換えない。新しい知見は memory + このHTMLに追記</li>
+    <li>未決チェックリストはタスク完了時に削除でなく ✅ で残す（経緯が見える）</li>
+  </ul>
+</details>
+
+<p class="footer">すまし猫流 AI開発日誌 — 企画サマリ v1 / 2026-05-28</p>
+
+</div>
+</body>
+</html>
