@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>農家の直販、どう始める？ — 調査レポート（2026年7月）</title>
+<style>
+  :root {
+    --ink: #2b2b2b;
+    --sub: #6b6b6b;
+    --line: #e3e0da;
+    --paper: #ffffff;
+    --bg: #f7f6f3;
+    --green: #3d7a45;
+    --green-bg: #eef5ef;
+    --amber: #9a6b1f;
+    --amber-bg: #fdf6e8;
+    --red: #a4453d;
+    --red-bg: #faeeed;
+    --blue: #34618e;
+    --blue-bg: #eef3f8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.9;
+    font-size: 16px;
+    padding: 24px 12px 80px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  header {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 36px 32px;
+    margin-bottom: 20px;
+  }
+  .tag {
+    display: inline-block;
+    background: var(--green-bg);
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 2px 12px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  h1 { font-size: 26px; line-height: 1.5; margin-bottom: 8px; }
+  .lede { color: var(--sub); font-size: 14.5px; }
+  section {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--green);
+    margin-bottom: 20px;
+  }
+  h2 .num {
+    display: inline-block;
+    color: var(--green);
+    margin-right: 8px;
+  }
+  h3 { font-size: 16.5px; margin: 24px 0 10px; }
+  p { margin-bottom: 14px; }
+  .box {
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 16px 0;
+    font-size: 15px;
+  }
+  .box .box-title { font-weight: 700; display: block; margin-bottom: 6px; }
+  .box-green { background: var(--green-bg); border-left: 4px solid var(--green); }
+  .box-green .box-title { color: var(--green); }
+  .box-amber { background: var(--amber-bg); border-left: 4px solid var(--amber); }
+  .box-amber .box-title { color: var(--amber); }
+  .box-red { background: var(--red-bg); border-left: 4px solid var(--red); }
+  .box-red .box-title { color: var(--red); }
+  .box-blue { background: var(--blue-bg); border-left: 4px solid var(--blue); }
+  .box-blue .box-title { color: var(--blue); }
+  .table-scroll { overflow-x: auto; margin: 16px 0; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    min-width: 560px;
+  }
+  th, td {
+    border: 1px solid var(--line);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f2f0ec; font-size: 13.5px; white-space: nowrap; }
+  td.num { text-align: right; white-space: nowrap; }
+  .good { color: var(--green); font-weight: 700; }
+  .bad { color: var(--red); font-weight: 700; }
+  .mid { color: var(--amber); font-weight: 700; }
+  ul, ol { padding-left: 24px; margin-bottom: 14px; }
+  li { margin-bottom: 8px; }
+  .term {
+    background: #f2f0ec;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 14px;
+  }
+  .note { color: var(--sub); font-size: 13px; }
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: stretch;
+    margin: 16px 0;
+  }
+  .flow .step {
+    flex: 1 1 180px;
+    background: var(--blue-bg);
+    border: 1px solid #d5e2ee;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  .flow .step b { display: block; color: var(--blue); margin-bottom: 4px; font-size: 13px; }
+  .bignum { font-size: 22px; font-weight: 700; }
+  a { color: var(--blue); }
+  footer { text-align: center; color: var(--sub); font-size: 12.5px; margin-top: 24px; }
+  @media (max-width: 600px) {
+    section, header { padding: 22px 18px; }
+    h1 { font-size: 21px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="tag">調査レポート 2026年7月25日</span>
+  <h1>農家の直販、どう始めるのが一番トクか？</h1>
+  <p class="lede">山形でズッキーニを栽培する農業法人が、知り合いの口コミを軸にネット直販を始めるケースを想定。「食べチョクのような既存サービスを使う」のと「自分のサイト＋決済だけ自前で揃える」のとを、実際の数字で比較しました。金額はすべて2026年7月時点で各社公式サイトを確認したものです。</p>
+</header>
+
+<!-- 結論 -->
+<section>
+  <h2><span class="num">1</span>先に結論</h2>
+
+  <div class="box box-green">
+    <span class="box-title">✔ 口コミでお客さんが付くなら、「自前」が有利</span>
+    食べチョクなどの手数料（売上の約20%）は、実質「お客さんを連れてきてくれること」への支払いです。知り合いの口コミで売れるなら、その分を払う理由がなくなります。自前の決済（後述のStripeなど）なら手数料は<b>3.6%</b>で済みます。
+  </div>
+
+  <div class="box box-amber">
+    <span class="box-title">△ ただし「完全に自前だけ」はおすすめしない</span>
+    今回の調査で「既存サービスを一切使わず自前だけで成功した農家」の事例は<b>1件も見つかりませんでした</b>。実際にうまくいっている農家はみんな「併用」です。また、<b>送料は既存サービス経由の方が安くなる場合があります</b>（大口契約の割引をサービス側がまとめて取っているため）。
+  </div>
+
+  <div class="box box-blue">
+    <span class="box-title">→ おすすめの形</span>
+    <b>①主戦場は自前</b>（LINE公式アカウント＋決済リンク。固定費ほぼゼロ）<br>
+    <b>②食べチョクを1本だけ併設</b>（新しいお客さんの入口＋割引送料の様子見用）<br>
+    口コミのお客さんは必ず自前の方で受ける。既存サービスに流すと2割取られて損。
+  </div>
+</section>
+
+<!-- 儲けの構造 -->
+<section>
+  <h2><span class="num">2</span>そもそも直販は儲かるのか（数字の裏付け）</h2>
+  <p>市場（卸売）に出すのと、消費者に直接売るのとでは、キロあたりの単価がこれだけ違います。</p>
+  <div class="table-scroll">
+  <table>
+    <tr><th>売り方</th><th>ズッキーニの単価（1kgあたり）</th><th>備考</th></tr>
+    <tr><td>市場に出荷</td><td class="num">約300〜500円</td><td>東京・大田市場の2026年平均は約411円。6月が最安（288円）、冬に高い</td></tr>
+    <tr><td><b>直販（産直EC）</b></td><td class="num"><span class="good">約600〜1,500円</span></td><td>食べチョクの実際の出品価格から算出。市場の<b>1.5〜3倍</b></td></tr>
+  </table>
+  </div>
+  <p>公的な試算（神奈川県農業技術センター）では、市場出荷前提でも10アールあたり年間の農業所得は<b>約56万円（1年目）→約92万円（2年目以降）</b>。単価が1.5〜3倍になる直販に切り替えられた分だけ、ここが上振れする計算になります。</p>
+  <div class="box box-amber">
+    <span class="box-title">△ ズッキーニ「単品」では売りにくい</span>
+    ズッキーニだけを取り寄せたい消費者は少なく、単品特化で成功した事例は見つかりませんでした。現実的な売り方は次の3つです。<br>
+    ① <b>夏野菜セットに組み込む</b>（トマト・ナスなどと「イタリアンセット」化）<br>
+    ② <b>イタリアン系の飲食店にまとめて卸す</b>（単価は下がるが、量が安定して出る）<br>
+    ③ <b>訳あり・大容量で安く量を売る</b>（4kg 1,580円などの実例あり）<br>
+    知り合いのネットワークに飲食店があるなら、東京ドーム級の生産量には②が一番合います。
+  </div>
+</section>
+
+<!-- 比較表 -->
+<section>
+  <h2><span class="num">3</span>販売サービスの比較（手数料と集客力）</h2>
+  <p>ポイントは「<b>手数料が高いサービスほど、お客さんを連れてきてくれる</b>」というシーソー関係です。</p>
+  <div class="table-scroll">
+  <table>
+    <tr><th>サービス</th><th>手数料</th><th>お客さんを<br>連れてくる力</th><th>ひとこと</th></tr>
+    <tr><td>食べチョク</td><td class="num"><span class="bad">19.7%</span></td><td class="good">強い</td><td>産直の定番。ヤマト運輸と提携していて送料割引あり</td></tr>
+    <tr><td>ポケットマルシェ</td><td class="num"><span class="bad">23%</span></td><td class="mid">まあまあ</td><td>2024年に20%→23%へ値上げ。生産者と客の交流重視</td></tr>
+    <tr><td>メルカリShops</td><td class="num"><span class="mid">10%</span></td><td class="good">強い（月2,000万人）</td><td>スマホだけで完結。冷蔵配送「クールメルカリ便」あり</td></tr>
+    <tr><td>BASE（ベイス）</td><td class="num"><span class="good">約6.6%</span></td><td class="bad">なし（自力）</td><td>「知人向け販売から始める農家に合う」と実践者の声</td></tr>
+    <tr><td>STORES（ストアーズ）</td><td class="num"><span class="good">5.5%</span></td><td class="bad">なし（自力）</td><td>BASEの競合。2026年8月に料金改定予定</td></tr>
+    <tr><td><b>自前（Stripe決済）</b></td><td class="num"><span class="good">3.6%</span></td><td class="bad">なし（自力）</td><td>今回の本命。詳細は次の章</td></tr>
+    <tr><td>楽天市場</td><td class="num"><span class="bad">実質15〜20%＋初期6万円</span></td><td class="good">強い</td><td>審査が厳しく費用も高い。今の段階では不向き</td></tr>
+    <tr><td>ふるさと納税</td><td class="num">自治体経由</td><td class="good">強い</td><td>市役所との関係づくりが前提。米・果物が強く野菜は埋もれがち</td></tr>
+  </table>
+  </div>
+  <p class="note">※ 手数料は2026年7月25日時点の各社公式発表。改定が頻繁なので、契約直前に必ず公式サイトで再確認を。</p>
+
+  <h3>1件売れたときの手数料はいくら違う？（3,000円の注文の場合）</h3>
+  <div class="table-scroll">
+  <table>
+    <tr><th>売り方</th><th>手数料として引かれる額</th></tr>
+    <tr><td>ポケットマルシェ</td><td class="num"><span class="bad">690円</span></td></tr>
+    <tr><td>食べチョク</td><td class="num"><span class="bad">591円</span></td></tr>
+    <tr><td>BASE</td><td class="num">238円</td></tr>
+    <tr><td><b>自前（Stripe）</b></td><td class="num"><span class="good">108円</span></td></tr>
+  </table>
+  </div>
+  <p>1件あたり<b>約480円</b>、100件売れば<b>約4.8万円</b>の差。口コミのお客さんを食べチョク経由で買わせるのは、それだけ損だということです。</p>
+</section>
+
+<!-- 自前スタック -->
+<section>
+  <h2><span class="num">4</span>「自前」は具体的に何を揃えるのか</h2>
+  <p>自前といっても、最初から本格的な通販サイトを作る必要はありません。段階を3つに分けます。</p>
+
+  <div class="flow">
+    <div class="step"><b>STEP 1（まずこれ）</b>LINE公式アカウント＋決済リンク。<b>固定費0円</b>。注文はLINEのやりとりで受けて、支払い用のURLを送るだけ</div>
+    <div class="step"><b>STEP 2（月20〜30件を超えたら）</b>紹介ページ＋注文フォームを追加。月3,000円ほどの固定費が発生</div>
+    <div class="step"><b>STEP 3（定期便をやるなら）</b>本格的な通販サイト化。リピーター管理や毎月の定期便を自動化</div>
+  </div>
+
+  <h3>「決済リンク」とは？</h3>
+  <p>Stripe（ストライプ）などの決済会社が発行してくれる<b>「支払い専用のURL」</b>です。お客さんはそのURLを開いてカード番号を入れるだけ。カード情報は決済会社側で処理されるので、<b>こちらはカード情報を一切預からず、セキュリティの法的な要件も自動的にクリア</b>できます。サイトすら無くても、LINEでURLを送れば決済が完了します。</p>
+
+  <h3>決済会社はどこがいい？</h3>
+  <div class="table-scroll">
+  <table>
+    <tr><th>決済会社</th><th>手数料</th><th>固定費</th><th>評価</th></tr>
+    <tr><td><b>Stripe（ストライプ）</b></td><td class="num">3.6%</td><td class="num">0円</td><td class="good">◎ 世界最大手。決済リンクが使いやすい</td></tr>
+    <tr><td>KOMOJU（コモジュ）</td><td class="num">3.25%</td><td class="num">0円</td><td class="good">◎ 手数料は最安クラス</td></tr>
+    <tr><td>Square（スクエア）</td><td class="num">3.6%</td><td class="num">0円</td><td>○ 入金が最短翌営業日と早い</td></tr>
+    <tr><td>UnivaPay（ユニバペイ）</td><td class="num">非公開</td><td class="num">非公開</td><td class="bad">△ 料金が個別見積もりで、個人農家には交渉のハードルが高い。<b>今回はおすすめしない</b></td></tr>
+  </table>
+  </div>
+  <p class="note">※ 生鮮食品の販売はStripeの禁止業種に入っていないことを確認済み。申込時に「冷蔵便で野菜を売る」と正直に書いて審査を受ければOK。</p>
+</section>
+
+<!-- 送料 -->
+<section>
+  <h2><span class="num">5</span>送料 — 実はここが勝負どころ</h2>
+  <p>野菜は単価が安いので、<b>手数料の差より送料の差が効いてくる</b>場面があります。山形から関東へ、夏場に冷蔵で1箱送る場合の実費（2026年7月時点の定価）:</p>
+  <div class="table-scroll">
+  <table>
+    <tr><th>運送会社</th><th>60サイズ<br>（小箱）</th><th>80サイズ</th><th>100サイズ</th><th>冷蔵の追加料金<br>（60/80/100）</th></tr>
+    <tr><td>ヤマト運輸（宅急便）</td><td class="num">940円</td><td class="num">1,230円</td><td class="num">1,530円</td><td class="num">+275 / 330 / 440円</td></tr>
+    <tr><td>佐川急便</td><td class="num">910円</td><td class="num">1,220円</td><td class="num">1,520円</td><td class="num">+275 / 330 / 440円</td></tr>
+    <tr><td>ゆうパック</td><td class="num">880円</td><td class="num">1,200円</td><td class="num">1,500円</td><td class="num">冷蔵60=+225円<br>（80/100は要確認）</td></tr>
+  </table>
+  </div>
+  <p>つまり夏のズッキーニを小箱で1つ送ると、定価では<b>約1,100〜1,200円</b>かかります。3,000円の注文なら4割が送料。ここを下げる方法が3つあります。</p>
+  <ol>
+    <li><b>運送会社と法人契約（掛売り契約）を結ぶ</b> — 登録も年会費も無料。割引率は非公開で「月にどれくらい出荷するか」を持って営業所と交渉する。法人なら交渉の土俵にも乗りやすい。<b>ネットには出ていない数字なので、見積もりを取りに行くのが一番価値のある次の一歩</b></li>
+    <li><b>食べチョクなどの提携送料を使う</b> — サービス側がヤマトと大口契約しており、関東発着の小箱が550円（税別）まで下がった事例あり。個人契約より安い可能性がある。これが「併用」をすすめる理由のひとつ</li>
+    <li><b>セット化・大箱化で1箱の売上を上げる</b> — 送料は箱単位なので、6,000円分まとめて送れば送料負担率は半分になる</li>
+  </ol>
+  <div class="box box-red">
+    <span class="box-title">✖ 夏場の注意: 冷蔵便は「冷やす」装置ではない</span>
+    クール便は「冷えた状態を保つ」サービスで、常温の野菜を入れても冷えません。<b>収穫後すぐ品温を下げる「予冷」</b>をしてから箱詰めするのが品質の生命線です。
+  </div>
+  <div class="box box-amber">
+    <span class="box-title">△ ゆうパックは2026年10月に約10%値上げ予定</span>
+    秋以降の採算計算は値上げ後の料金で行うこと。
+  </div>
+</section>
+
+<!-- 法律・手続き -->
+<section>
+  <h2><span class="num">6</span>法律・手続きのチェックリスト</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>項目</th><th>結論</th></tr>
+    <tr><td>採れた野菜をそのまま売る</td><td><span class="good">許可・届出は不要</span>。自分で育てた生鮮野菜をカットせずに売るなら営業許可はいらない</td></tr>
+    <tr><td>ピクルス・漬物などの加工品</td><td><span class="bad">要注意！</span> 2021年の法改正で「漬物製造業許可」が必須に。<b>自宅の台所での製造は不可</b>で専用施設が必要。安易に手を出さないこと</td></tr>
+    <tr><td>ネット販売の表示義務（特定商取引法）</td><td><span class="mid">生鮮のみでも必須</span>。法人なら<b>会社名・所在地・代表者名・電話・返品条件</b>を1ページにまとめればOK（会社所在地を書けばよいので、個人の自宅住所問題は発生しない）</td></tr>
+    <tr><td>「無農薬」という表記</td><td><span class="bad">禁止</span>。「栽培期間中、農薬不使用」などの言い換えが必要。「有機」表記は有機JAS認証が必須</td></tr>
+    <tr><td>PayPayの個人間送金で代金を受け取る</td><td><span class="bad">規約違反</span>。知り合い相手でも商売の代金はNG。ちゃんとした決済（Stripe等）か銀行振込を使う</td></tr>
+    <tr><td>インボイス登録</td><td>すでに課税事業者の法人（売上1,000万円超）なら、適格請求書発行事業者の登録が済んでいるか確認するだけでOK。未登録のままだと<b>飲食店への卸で相手のお店が税金の控除を受けられず嫌がられる</b>ので、卸を伸ばすなら登録を</td></tr>
+    <tr><td>会社としての手続き</td><td><span class="good">法人なので開業届は不要</span>。各サービスの審査も登記簿情報で通り、個人より有利。定款の事業目的に「小売・通信販売」系の文言があるかだけ念のため確認</td></tr>
+  </table>
+  </div>
+</section>
+
+<!-- 販路の広げ方 -->
+<section>
+  <h2><span class="num">7</span>口コミの外へ販路を広げるとき（実例集）</h2>
+  <ul>
+    <li><b>SNS → 直販</b>: TikTokでフォロワー3.6万人を集めた小ネギ農家（茨城・栗原農園）、メルカリで新規客を捕まえてLINEでリピーター化する二段構え（佐賀・ミヤハラ農園）、規格外トマトを「皮が割れるのは糖度が高い証拠」というストーリーで48時間完売させた例など。</li>
+    <li><b>飲食店への直接卸</b>: そば粉を全国300軒の蕎麦屋に直販する農家の例（群馬・赤城深山ファーム）。マッチングは国の機関が運営する無料サービス<b>「ベジマチ」</b>が稼働中（生産者777件登録）。<span class="bad">※昔有名だった「SEND」は2022年に倒産済み。古い記事に注意</span></li>
+    <li><b>定期便（前払い制）</b>: 半年分前払いの野菜セットコース（茨城・つくば飯野農園ほか）。リピーターを仕組みで固定できる。</li>
+    <li><b>ふるさと納税</b>: 市役所経由で返礼品に登録する方式。手間は少ないが、農家の利用率は9.4%にとどまり、野菜単品は米・果物に埋もれやすい。</li>
+  </ul>
+</section>
+
+<!-- 次の一歩 -->
+<section>
+  <h2><span class="num">8</span>次にやること</h2>
+  <ol>
+    <li><b>ヤマト運輸の営業所で事業者契約の見積もりを取る</b>（月間の出荷見込み数を持参）。送料の実額はここでしか分からない</li>
+    <li><b>Stripeのアカウントを作って決済リンクを1本発行してみる</b>（無料・即日）。LINEで知り合いに送れば最小の直販が完成</li>
+    <li><b>食べチョクに生産者登録を申請</b>して、山形発の提携送料の実額を確認する</li>
+    <li>特定商取引法の表示ページを用意する（1ページで済む）</li>
+    <li>秋以降はゆうパック値上げ（2026年10月）を織り込んで送料を再計算</li>
+  </ol>
+  <p class="note">詳しい出典・元データ: <b>C:\ClaudeCode\docs\farm-direct-sales-research-2026-07.md</b>（各数値の出典URL付き）</p>
+</section>
+
+<footer>調査: 2026年7月25日時点の各社公式サイト・公的資料・実践者の記事に基づく。料金・規約は改定されるため、契約前に必ず公式サイトで最新情報を確認してください。</footer>
+</div>
+</body>
+</html>
